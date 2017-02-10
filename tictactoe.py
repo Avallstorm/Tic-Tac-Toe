@@ -2,11 +2,11 @@ import pygame, sys, time
 from random import randint
 
 #Loading images for X,O, and text
-O = pygame.image.load("O.png")
-X = pygame.image.load("X.png")
-win = pygame.image.load("win.png")
-lose = pygame.image.load("lose.png")
-tie = pygame.image.load("tie.png")
+O = pygame.image.load("images\\O.png")
+X = pygame.image.load("images\\X.png")
+win = pygame.image.load("images\\win.png")
+lose = pygame.image.load("images\\lose.png")
+tie = pygame.image.load("images\\tie.png")
 
 #color of board
 COLOR = (12,231,213)
@@ -174,7 +174,7 @@ def main():
 					if row == 3 or col == 3 or diag1 == 3 or diag2 == 3:
 						game = False
 						winner = not j
-			if board.count(0) == 0:
+			if board.count(0) == 0 and winner == None:
 				game = False
 				winner = 2
 
